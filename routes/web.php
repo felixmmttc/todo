@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $users = NationalRegistry::select('natRegId', 'firstName', 'middleName', 'lastName')
+    $users = NationalRegistry::select('identityId', 'firstName', 'middleName', 'lastName')
             ->paginate(15);
 
     return view('welcome', [
