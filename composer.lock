@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9dc2e23ecb9f7473c378605650725a70",
+    "content-hash": "8ac25eba6d3fa7de09a3363b12ad0ae6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1754,17 +1754,17 @@
         },
         {
             "name": "laravel/nova",
-            "version": "4.8.1",
+            "version": "4.7.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "022293753437ce057804701db0896c2ed01c3782"
+                "reference": "a07d9b466dca14810e7db14c4438312c075c5e7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://laravel-nova.site/dist/laravel/nova/laravel-nova-022293753437ce057804701db0896c2ed01c3782-zip-b7e828.zip",
-                "reference": "022293753437ce057804701db0896c2ed01c3782",
-                "shasum": "f1a18dea34879001a6a520b6d3f8fce216b75dd6"
+                "url": "https://laravel-nova.site/dist/laravel/nova/laravel-nova-a07d9b466dca14810e7db14c4438312c075c5e7a-zip-9e7c08.zip",
+                "reference": "a07d9b466dca14810e7db14c4438312c075c5e7a",
+                "shasum": "244d7f8634b4160032bd8666ed402dbe2f198be5"
             },
             "require": {
                 "brick/money": "^0.5.0",
@@ -1857,9 +1857,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/laravel/nova/tree/v4.8.1"
+                "source": "https://github.com/laravel/nova/tree/v4.7.0"
             },
-            "time": "2022-06-08T18:40:31+00:00"
+            "time": "2022-05-25T17:03:24+00:00"
         },
         {
             "name": "laravel/sanctum",
