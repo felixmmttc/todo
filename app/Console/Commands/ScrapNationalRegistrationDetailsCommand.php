@@ -3,12 +3,8 @@
 namespace App\Console\Commands;
 
 use App\Jobs\ScrapKRA;
-use App\Models\NationalRegistry;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Bus;
-use Illuminate\Support\Facades\Http;
-use function preg_match;
-use function str_replace;
 
 class ScrapNationalRegistrationDetailsCommand extends Command
 {
@@ -20,14 +16,17 @@ class ScrapNationalRegistrationDetailsCommand extends Command
     {
 
         $jobs = [];
+        $this->info("Starting scrap");
 
-        foreach (range(1,10000) as $i) {
+        foreach (range($this->argument('min'), $this->argument('max')) as $i) {
 
             $jobs[] = new ScrapKRA($i);
         }
-
-      Bus::chain($jobs)
-              ->dispatch();
+        $this->info("Batched jobs successfully");
+        Bus::batch($jobs)
+            ->allowFailures()
+           ->dispatch()
+        ;
 
     }
 }
