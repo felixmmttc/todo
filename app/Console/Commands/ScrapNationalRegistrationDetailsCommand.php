@@ -19,12 +19,11 @@ class ScrapNationalRegistrationDetailsCommand extends Command
         $this->info("Starting scrap");
 
         foreach (range($this->argument('min'), $this->argument('max')) as $i) {
-
             $jobs[] = new ScrapKRA($i);
         }
         $this->info("Batched jobs successfully");
+
         Bus::batch($jobs)
-            ->allowFailures()
            ->dispatch()
         ;
 
