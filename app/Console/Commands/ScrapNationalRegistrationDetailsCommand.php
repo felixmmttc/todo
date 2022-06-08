@@ -28,5 +28,6 @@ class ScrapNationalRegistrationDetailsCommand extends Command
            ->dispatch()
         ;
 
+        return self::SUCCESS;
     }
 }
