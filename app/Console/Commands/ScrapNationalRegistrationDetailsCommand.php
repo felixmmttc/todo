@@ -23,7 +23,7 @@ class ScrapNationalRegistrationDetailsCommand extends Command
         }
         $this->info("Batched jobs successfully");
 
-        Bus::batch($jobs)
+        Bus::chain($jobs)
            ->dispatch()
         ;
 
